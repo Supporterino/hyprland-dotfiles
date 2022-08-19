@@ -1,0 +1,94 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "gtk-layer-shell": false,
+    "margin-bottom": 4,
+    "modules-left": ["wlr/workspaces","custom/spotify"],
+    // "modules-center": ["custom/spotify"],
+    "modules-right": [
+        "cpu", 
+        "custom/separator",
+        "memory",
+        "custom/separator",
+        "temperature",
+        "custom/separator",
+        "pulseaudio",
+        "custom/separator",
+        "network",
+        "custom/separator",
+        "clock",
+        "custom/separator",
+        "tray"],
+    "wlr/workspaces": {
+        "format": "{name}",
+        "sort-by-name": true,
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 6
+    },
+    "clock": {
+        "format": "{:%H:%M %a %Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%H:%M:%S}",
+        "interval": 1
+    },
+    "cpu": {
+        "format": "&#8239;{usage}%",
+        "tooltip": false,
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon}&#8239;{temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "network": {
+        "format-wifi": "&#8239;{essid} ({signalStrength}%)",
+        "format-ethernet": "&#8239;{ifname}: {ipaddr}",
+        "format-linked": "&#8239;{ifname} (No IP)",
+        "format-disconnected": "&#8239;Disconnected",
+        "format-alt": "{ifname}: {ipaddr}"
+    },
+    "pulseaudio": {
+        "format": "{icon}&#8239;{volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "&#8239;0%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}

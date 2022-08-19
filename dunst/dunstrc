@@ -1,0 +1,45 @@
+
+[global]
+monitor = 1
+follow = none
+enable_posix_regex=true
+width = 300
+height = 200
+notification_limit = 3
+origin = bottom-left
+offset = 30x50
+progress_bar = true
+progress_bar_horizontal_alignment = left
+progress_bar_height = 20
+progress_bar_min_width = 250
+progress_bar_max_width = 250
+progress_bar_frame_width = 1
+indicate_hidden = true
+separator_height = 0
+gap_size = 4
+font = "Monospace 10"
+show_age_threshold = 120
+dmenu = /usr/bin/rofi -dmenu -p dunst:
+corner_radius = 4
+mouse_right_click = do_action
+
+[shortcuts]
+close = ctrl+shift+space
+close_all = ctrl+shift+space
+history = ctrl+grave
+context = ctrl+shift+period
+
+[urgency_low]
+background = "#002b36"
+foreground = "#839496"
+frame_color = "#586e75"
+
+[urgency_normal]
+background = "#002b36"
+foreground = "#839496"
+frame_color = "#586e75"
+
+[urgency_critical]
+background = "#002b36"
+foreground = "#E06B74"
+frame_color = "#cb4b16"
