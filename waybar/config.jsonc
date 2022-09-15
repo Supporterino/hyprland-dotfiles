@@ -3,8 +3,8 @@
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "gtk-layer-shell": false,
     "margin-bottom": 4,
-    "modules-left": ["wlr/workspaces","custom/spotify"],
-    // "modules-center": ["custom/spotify"],
+    "modules-left": ["wlr/workspaces","idle_inhibitor"],
+    "modules-center": ["clock", "hyprland/window"],
     "modules-right": [
         "cpu", 
         "custom/separator",
@@ -16,9 +16,11 @@
         "custom/separator",
         "network",
         "custom/separator",
-        "clock",
+        // "clock",
+        // "custom/separator",
+        "tray",
         "custom/separator",
-        "tray"],
+        "custom/power"],
     "wlr/workspaces": {
         "format": "{name}",
         "sort-by-name": true,
@@ -50,9 +52,10 @@
         "spacing": 6
     },
     "clock": {
-        "format": "{:%H:%M %a %Y-%m-%d}",
+        "format": "{: %a %d %b %Y  %I:%M:%S %p}",
+        "tooltip":true,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%H:%M:%S}",
+        "format-alt": " {:%H:%M:%S}",
         "interval": 1
     },
     "cpu": {
@@ -90,5 +93,12 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/power": {
+		"format": "",
+		"on-click": "hyprctl dispatch exit"
+	},
+    "hyprland/window": {
+        "format": "👉 {}"
     }
 }
