@@ -78,7 +78,8 @@ window#waybar {
 #mode,
 #custom-power,
 #custom-menu,
-#idle_inhibitor {
+#idle_inhibitor,
+#hyprland-window {
     padding: 0 10px;
 }
 

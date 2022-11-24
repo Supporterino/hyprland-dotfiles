@@ -99,6 +99,6 @@
 		"on-click": "hyprctl dispatch exit"
 	},
     "hyprland/window": {
-        "format": "👉 {}"
+        "format": "- {}"
     }
 }
