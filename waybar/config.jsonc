@@ -16,8 +16,8 @@
         "custom/separator",
         "network",
         "custom/separator",
-        // "clock",
-        // "custom/separator",
+        "battery",
+        "custom/separator",
         "tray",
         "custom/separator",
         "custom/power"],
@@ -100,5 +100,15 @@
 	},
     "hyprland/window": {
         "format": "- {}"
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
     }
 }
